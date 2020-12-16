@@ -1,5 +1,5 @@
 import os, sys, time
-os.system("clear")
+
 
 a = "*.unity3d"
 s = " "
@@ -41,26 +41,28 @@ role = '''
 
  
  '''
+print(w)    
+print(role)
 
 
 file = input("Enter Code: ")
 
 
 def unzip():
-	with ZipFile(final + file + ".zip", 'r') as zipObj:
-		zipObj.extractall()
-unzip()		
+	os.system("unzip " + final + file + ".zip")
+unzip()
 		
 def main():
 	#fn = input("Enter Skin Folder Name: ")
 	sounds = input("File contain Audio [y/n]: ")
 	#art
-	os.system("cp " + b + file + "/" + p + a + s + c + p)
+	os.system("cp " + file + p + a + s + c + p)
 	#ui
-	os.system("cp " + b + file + "/" + u + a + s + c + u)
+	
+	os.system("cp " + file + u + a + s + c + u)
 	#audio
 	if not sounds == "n":
-		os.system("cp " + b + file + "/" + au + a + s + c + au)
+		os.system("cp " + file + au + a + s + c + au)
 	else:
 		print ("no audio files....")
 	os.system("rm -r " + file)
@@ -69,8 +71,4 @@ def main():
 main()	
     
             
-print(w)    
-print(role)
-
-main()
 	
