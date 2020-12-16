@@ -44,11 +44,13 @@ role = '''
 print(w)    
 print(role)
 
+
+
 dl = input("Download File link [y/n]: ")
 if dl == "y" or dl == "Y" or dl == "yes" or dl == "YES" or dl == "Yes":
 	download = input("Enter Download link: ")
 	print("Downloading Please wait...")
-	r = requests.get(download)
+	r = requests.get("https://drive.google.com/uc?id=" + download + "&export=download")
 	z = zipfile.ZipFile(io.BytesIO(r.content))
 	z.extractall()
 	
@@ -59,9 +61,7 @@ else:
 file = input("Enter Code: ")
 
 
-def unzip():
-	os.system("unzip " + final + file + ".zip")
-unzip()
+
 		
 def main():
 	#fn = input("Enter Skin Folder Name: ")
