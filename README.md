@@ -1,5 +1,5 @@
 # mlbb
 Mobile legends skin script
 
-![img](https://i.imgur.com/FjVq7ME.png)
+![img](http://imgur.com/gallery/HarHW7d)
 
