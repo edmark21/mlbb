@@ -48,7 +48,7 @@ print(role)
 
 dl = input("Download File link [y/n]: ")
 if dl == "y" or dl == "Y" or dl == "yes" or dl == "YES" or dl == "Yes":
-	download = input("Enter Download link: ")
+	download = input("Enter Code: ")
 	print("Downloading Please wait...")
 	r = requests.get("https://drive.google.com/uc?id=" + download + "&export=download")
 	z = zipfile.ZipFile(io.BytesIO(r.content))
@@ -58,7 +58,7 @@ else:
 	print("file already")
 	
 
-file = input("Enter Code: ")
+file = input("Enter Skin Code: ")
 
 
 
