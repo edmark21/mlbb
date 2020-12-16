@@ -1,6 +1,16 @@
 import os, sys, time
 import requests, zipfile, io
 
+
+fname = 'requirements.txt'
+with open(fname, 'r', encoding='utf-8') as fhd:
+        for line in fhd:
+            try:
+            	exec("import " + line)
+            except:
+            	print("[ERROR] Missing module:", line)
+
+
 a = "*.unity3d"
 s = " "
 #a
@@ -48,7 +58,7 @@ print(role)
 
 dl = input("Download File link [y/n]: ")
 if dl == "y" or dl == "Y" or dl == "yes" or dl == "YES" or dl == "Yes":
-	download = input("Enter Code: ")
+	download = input("Enter Download link: ")
 	print("Downloading Please wait...")
 	r = requests.get("https://drive.google.com/uc?id=" + download + "&export=download")
 	z = zipfile.ZipFile(io.BytesIO(r.content))
@@ -58,7 +68,7 @@ else:
 	print("file already")
 	
 
-file = input("Enter Skin Code: ")
+file = input("Enter Code: ")
 
 
 
