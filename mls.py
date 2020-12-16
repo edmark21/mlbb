@@ -1,5 +1,5 @@
 import os, sys, time
-
+os.system("clear")
 
 a = "*.unity3d"
 s = " "
