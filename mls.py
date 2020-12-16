@@ -66,7 +66,11 @@ def main():
 	else:
 		print ("no audio files....")
 	os.system("rm -r " + file)
+
+        print("****************************")
 	print("Skin replace Successfully..")
+        print("****************************")
+
 
 main()	
     
