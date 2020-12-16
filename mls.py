@@ -1,5 +1,5 @@
 import os, sys, time
-
+import requests, zipfile, io
 
 a = "*.unity3d"
 s = " "
@@ -44,6 +44,17 @@ role = '''
 print(w)    
 print(role)
 
+dl = input("Download File link [y/n]: ")
+if dl == "y" or dl == "Y" or dl == "yes" or dl == "YES" or dl == "Yes":
+	download = input("Enter Download link: ")
+	print("Downloading Please wait...")
+	r = requests.get(download)
+	z = zipfile.ZipFile(io.BytesIO(r.content))
+	z.extractall()
+	
+else:
+	print("file already")
+	
 
 file = input("Enter Code: ")
 
@@ -54,7 +65,7 @@ unzip()
 		
 def main():
 	#fn = input("Enter Skin Folder Name: ")
-	sounds = input("File contain Audio [y/n]: ")
+	sounds = input("Does File contain Audio Folder [y/n]: ")
 	#art
 	os.system("cp " + file + p + a + s + c + p)
 	#ui
