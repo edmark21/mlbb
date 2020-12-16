@@ -15,7 +15,7 @@ c = "/storage/emulated/0/Android/data/com.mobile.legends/files/dragon2017/assets
 #d = "
 #e = "
 
-final = "/storage/emulated/0/download/"
+final = "/storage/emulated/0/Download/"
 
 
 w = '''
