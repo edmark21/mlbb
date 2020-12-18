@@ -19,6 +19,10 @@ Installation:
 
 $ git clone https://github.com/edmark21/mlbb
 
+$ cd mlbb
+
+$ python ml.py
 
 
 
+Enjoy!!!
