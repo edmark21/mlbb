@@ -5,7 +5,7 @@ Mobile legends skin script
 
 ![img](https://imgur.com/gallery/hUGd92K)
 
-
+Please allow storage permission first on your termux.
 
 Requirements:
 
